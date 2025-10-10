@@ -9,6 +9,12 @@ from openai import OpenAI
 st.set_page_config(page_title="Trump-Inspired Chatbot 🇺🇸", page_icon="🇺🇸")
 st.title("🇺🇸 Trump-Inspired Chatbot")
 st.caption("An AI speaking in a confident, business-leader style inspired by Donald Trump (not the real person).")
+st.image(
+    "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg",
+    width=200,
+    caption="Trump-Inspired Chatbot – Think Big, Win Big!"
+)
+
 
 # ---------- API key loading (Cloud → Env → .env → paste box) ----------
 def _clean_key(k: str | None) -> str | None:
@@ -107,3 +113,4 @@ if user_text:
 
     # save assistant reply
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
