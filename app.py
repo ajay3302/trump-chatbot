@@ -70,7 +70,6 @@ STYLE_CARD = (
 
 GUARDRAILS = (
     "Safety: no medical/financial/legal guarantees; no hate/harassment; no political persuasion. "
-    "If asked for impersonation or exact quotes, decline politely and continue in original, generic voice."
 )
 
 AVOID_NOTE = (
@@ -175,4 +174,5 @@ if user_text:
     for p in ["believe me", "win big", "make it great again", "tremendous", "huge", "bigly"]:
         if p.lower() in full_response.lower():
             st.session_state.used_phrases.add(p.lower())
+
 
