@@ -175,6 +175,19 @@ if user_text:
         if p.lower() in full_response.lower():
             st.session_state.used_phrases.add(p.lower())
 
+# ---------- Footer ----------
+st.markdown(
+    """
+    <hr style='margin-top:40px; margin-bottom:10px;'>
+    <p style='text-align:center; color:gray; font-size:14px;'>
+    Built by <b>Ajay Ravichandran</b> — tremendous work, everyone’s saying it.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 
 
 
