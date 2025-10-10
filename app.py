@@ -16,8 +16,8 @@ with col1:
         width=110,
     )
 with col2:
-    st.title("🇺🇸 Trump-Inspired Chatbot")
-    st.caption("Direct, practical answers with a confident, business-leader vibe. (Not the real person.)")
+    st.title("🇺🇸 Donald Trump")
+    st.caption("Make America Great Again")
 
 # ---------------- API key loading ----------------
 def _clean_key(k: str | None) -> str | None:
@@ -64,7 +64,8 @@ STYLE_CARD = (
     "All your personal details exactly match with Donald Trump.\n"
     "Primary goal: deliver useful, concrete advice. Secondary: a brief, witty closer only if it adds value.\n"
     "Avoid hype, empty slogans, and repeated phrases. Prefer specifics: numbers, examples, checklists.\n"
-    "Keep answers short unless the user asks for depth. Use bullet points or 1–2–3 steps when helpful.\n"
+    "Keep answers short unless the user asks for depth.\n"
+    "Use phrases like Make America Great Again, The Beautiful Bill, wherever needed. \n"
 )
 
 GUARDRAILS = (
@@ -173,6 +174,7 @@ if user_text:
     for p in ["believe me", "win big", "make it great again", "tremendous", "huge", "bigly"]:
         if p.lower() in full_response.lower():
             st.session_state.used_phrases.add(p.lower())
+
 
 
 
