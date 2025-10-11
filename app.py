@@ -117,7 +117,7 @@ def mode_instructions(mode: str) -> str:
 # ---------------- Session state ----------------
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "assistant", "content": "Hi! Ask about business, growth, habits, or a quick plan — I’ll keep it practical."}
+        {"role": "assistant", "content": "Hi! I am Donald Trump, Ask me anything."}
     ]
 if "used_phrases" not in st.session_state:
     st.session_state.used_phrases = set()
@@ -185,6 +185,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
